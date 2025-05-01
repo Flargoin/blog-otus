@@ -4,7 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.js": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "keywords": [],
   "author": "",
@@ -13,6 +23,7 @@
     "@eslint/config-helpers": "^0.2.1",
     "eslint": "^9.25.1",
     "eslint-config-xo": "^0.47.0",
+    "husky": "^9.1.7",
     "prettier": "3.5.3"
   }
 }
