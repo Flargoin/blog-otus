@@ -1,7 +1,12 @@
 body {
+    margin: 0;
     font-family: sans-serif;
     background-color: #191919;
     color: white;
+}
+
+section {
+    padding: 50px 0;
 }
 
 ul {
@@ -14,6 +19,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
 }
+
+h1 {
+    padding: 20px 0;
+}
+
 button {
     padding: 0;
     margin: 0;
@@ -96,8 +106,8 @@ button {
 
 .chat {
     position: fixed;
-    bottom: 5%;
-    right: 5%;
+    bottom: 2%;
+    right: 1%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,6 +217,8 @@ button {
 }
 
 .chat-box__textarea {
+    padding-top: 10px;
+    padding-bottom: 10px;
     min-height: 100px;
 }
 
@@ -214,10 +226,19 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 45px;
+    font-size: 30px;
+    line-height: 1;
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    border: none;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
+@media(hover: hover) {
+    .chat-box__btn:hover {
+        border-color: white;
+        background-color: transparent;
+        color: white;
+    }
+}
