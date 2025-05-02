@@ -1,4 +1,5 @@
 import globals from "globals";
+import pluginJs from "@eslint/js";
 import eslintRecommended from "@eslint/js/src/configs/eslint-recommended.js";
 
 export default [
